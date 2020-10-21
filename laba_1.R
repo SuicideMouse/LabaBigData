@@ -47,5 +47,4 @@ print(my.array)
 #######
 x <- c(21, 62, 10, 53)
 labels <- c("x", "y", "z", "k")
-# Plot the chart.
 pie(x,labels)
