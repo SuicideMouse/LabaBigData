@@ -37,7 +37,7 @@ namespace WebApplication3.Controllers
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             string newURL = new string(Enumerable.Repeat(chars, 10).Select(s => s[random.Next(s.Length)]).ToArray());
             db.StringSet(newURL, URL);
-            db.KeyExpire(newURL, new TimeSpan(0, 0, 30)); // 30 сек
+            db.KeyExpire(newURL, new TimeSpan(0, 10, 0)); // 10 мин
             ViewData["URL"] = newURL;
             return View();
         } 
